@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/a2css.css">
+    <script src="js/a2js.js"></script>
+    <meta charset="UTF-8">
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="head">Tax Calculator</h1>
+    </header>
+    <fieldset class="field">
+      <form class="tax-form" name="taxes">
+        How much was your meal? <input type="text" id="cost" name="cost">
+        <br>
+        <br>
+        <input type="button" value="Calculate Tax" onclick="findTax(this.form.cost.value)"> <input type="text" id="tax" name="taxResult">
+        <br>
+        <br>
+        <input type="button" value="Calculate Total" onclick="findTotal(this.form.cost.value)"> <input type="text" id="total" name="totalResult">
+      </form>
+    </fieldset>
+  </body>
+</html>

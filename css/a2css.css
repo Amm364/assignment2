@@ -1,0 +1,13 @@
+.field{
+    width:400px;
+    position:absolute;
+    left:475px;
+}
+
+.head{
+    text-align:center;
+}
+
+body{
+    background-color:lightblue;
+}
