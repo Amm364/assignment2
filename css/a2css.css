@@ -1,13 +1,43 @@
 .field{
-    width:400px;
-    position:absolute;
-    left:475px;
+  width: 400px;
+  position: absolute;
+  left: 475px;
+  border-width: 10px;
 }
 
 .head{
-    text-align:center;
+  text-align: center;
 }
 
 body{
-    background-color:lightblue;
+  background-color: lightblue;
+}
+
+.head{
+  color: red;
+}
+
+.paragraph{
+  color: purple;
+}
+
+.button{
+  color: blue;
+}
+
+.legend{
+  color: black;
+  font-family: "Times New Roman";
+  font-style: italic;
+}
+
+#tipResult{
+  display: none;
+  font-size: 50px;
+  font-weight: 400;
+  color: red;
+}
+
+.submit{
+  color: blue;
 }

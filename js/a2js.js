@@ -1,25 +1,35 @@
-function findTax(x){
-    if (x==""){
-        alert("Error. Please enter a number.");
-        return;
-    }
-    var tax=(x*0.20);
-    if (isNaN(tax)){
-        alert("Error");
-        return;
-    }
-    document.taxes.taxResult.value=tax;
-    return tax;
+function findTip(x){
+  if (x==""){
+    alert("Error. Please enter a number.");
+      return;
+  }
+  var tip=(x*0.20);
+  if (isNaN(tip)){
+    alert("Error: " + x + " is not a valid price.");
+    return;
+  }
+  document.tips.tipResult.value=tip;
+  return tip;
 }
 
-function findTotal(x){
-    if (x==""){
-        alert("Error. Please enter a number.");
-        return;
-    }
-    var total=parseFloat(x)+parseInt(findTax(x));
-    if (isNaN(total)){
-        return;
-    }
-    document.taxes.totalResult.value=total;
+function calculate(x){
+  document.getElementById("tips").style.display="none";
+  if (x==""){
+    alert("Error. Please enter a number.");
+    return;
+  }
+  var total=parseFloat(x)+parseFloat(findTip(x));
+  console.log(total);
+  if (isNaN(total)){
+    return;
+  }
+  total="Total:$" + total;
+  document.getElementById("tipResult").style.display="inline";
+  document.getElementById("tipResult").innerHTML = total;
 }
+
+$("document").ready(function () {
+  $('#tips').submit(function (e) {
+    e.preventDefault();
+  })
+})

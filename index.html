@@ -2,24 +2,25 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="css/a2css.css">
-    <script src="js/a2js.js"></script>
     <meta charset="UTF-8">
     <title>Assignment 2</title>
   </head>
   <body>
     <header>
-      <h1 class="head">Tax Calculator</h1>
+      <h1 class="head">Tip Calculator</h1>
     </header>
-    <fieldset class="field">
-      <form class="tax-form" name="taxes">
-        How much was your meal? <input type="text" id="cost" name="cost">
+    <fieldset class="field" id="tipFieldset">
+      <p class="result" id="tipResult"></p>
+      <legend class="legend">Calculator</legend>
+      <form class="tip-form" id="tips" name="tips" method="get" action="">
+        <p class="paragraph">How much was your meal? <input type="text" id="cost" name="cost"></p>
+        <input class="button" type="button" value="Calculate Tip" onclick="findTip(this.form.cost.value)"> <input type="text" id="tip" name="tipResult">
         <br>
         <br>
-        <input type="button" value="Calculate Tax" onclick="findTax(this.form.cost.value)"> <input type="text" id="tax" name="taxResult">
-        <br>
-        <br>
-        <input type="button" value="Calculate Total" onclick="findTotal(this.form.cost.value)"> <input type="text" id="total" name="totalResult">
+        <input class="submit" type="submit" value="Find Total" onclick="calculate(this.form.cost.value)">
       </form>
     </fieldset>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+    <script src="js/a2js.js"></script>
   </body>
 </html>
